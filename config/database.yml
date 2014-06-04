@@ -1,0 +1,12 @@
+common: &common
+  adapter: postgresql
+  username: tracker
+  # Don't use a password by default
+
+development:
+  <<: *common
+  database: tracker_development
+
+test:
+  <<: *common
+  database: tracker_test
